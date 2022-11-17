@@ -53,4 +53,4 @@ jobs:
           - name: Build and tag docker image
             run: docker build -t sathishkumar281995/github-action-demo .
           - name: Docker push
-            run: docker push sathishkumar281995/github-action-demo:latest .
+            run: docker image push sathishkumar281995/github-action-demo:latest
