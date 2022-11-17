@@ -38,3 +38,14 @@ jobs:
               java-version: 11.0.4
           - name: Maven test command
             run: mvn install
+    #deploy:
+          # Home Work
+
+    #      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml 
+    docker:
+        name : "Building docker image"
+        runs-on: ubuntu-18.04
+        environment: dev
+        steps:
+          - uses: actions/checkout@v1
+          - docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}} https://hub.docker.com
