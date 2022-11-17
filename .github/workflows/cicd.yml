@@ -49,8 +49,8 @@ jobs:
         steps:
           - uses: actions/checkout@v1
           - name: Docker login
-            run: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}}  https://registry.hub.docker.com
+            run: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}} 
           - name: Build and tag docker image
-            run: docker build -t sathishkumar281995/demo_app .
+            run: docker build -t sathishkumar281995/github-action-demo .
           - name: Docker push
-            run: docker push sathishkumar281995/demo_app
+            run: docker push sathishkumar281995/github-action-demo
