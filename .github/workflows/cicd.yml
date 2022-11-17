@@ -49,4 +49,4 @@ jobs:
         steps:
           - uses: actions/checkout@v1
           - name: Docker login
-            run: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}} https://hub.docker.com
+            run: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}}  https://registry.hub.docker.com
