@@ -48,4 +48,5 @@ jobs:
         environment: dev
         steps:
           - uses: actions/checkout@v1
-          - docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}} https://hub.docker.com
+          - name: Docker login
+          - run: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}} https://hub.docker.com
