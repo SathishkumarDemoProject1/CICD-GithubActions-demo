@@ -50,3 +50,6 @@ jobs:
           - uses: actions/checkout@v1
           - name: Docker login
             run: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}}  https://registry.hub.docker.com
+          - name: Build and tag docker image
+            run: docker build -t sathishkumar281995/githubActionDemo .
+          - name: docker push sathishkumar281995/githubActionDemo
